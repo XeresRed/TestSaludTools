@@ -1,0 +1,15 @@
+<div class="d-flex" [ngClass]="{ 'toggled': !(showToolbar$ | async) }" id="wrapper">
+  <!-- Sidebar -->
+  <app-sidebar [menu]="menu"></app-sidebar>
+  <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <app-header></app-header>
+
+      <div class="container-fluid" style=" padding: 15px;">
+          <router-outlet></router-outlet>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>

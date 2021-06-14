@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-12">
+    <a (click)="goBack()">
+      <i class="fas fa-arrow-left btn-icon"></i> Volver
+    </a>
+  </div>
+</div>
+<div class="row" *ngIf="(cita$ | async) as cita">
+  <div class="col-md-12 col-lg-8 mx-auto">
+    <h1 class="d-flex" style="justify-content: center; margin: 80px 0">
+      <div class="importance" style="margin: auto 5px;" [style.backgroundColor]="cita.Color"></div> {{cita.Nombre}}
+    </h1>
+    <ul class="nav justify-content-end">
+      <li class="nav-item mx-1">
+        <button class=" btn btn-primary btn-sm" (click)="edit(cita.id)">
+          <i class="far fa-edit"></i> Editar
+        </button>
+      </li>
+      <li class="nav-item mx-1">
+        <button class=" btn btn-sm" (click)="changeStatus(cita)" [ngClass]="{'btn-danger': cita.Activa, 'btn-secondary': !cita.Activa}">
+          <i class="far fa-trash-alt" *ngIf="cita.Activa "></i>
+          <i class="far fa-check-circle" *ngIf="!cita.Activa "></i>
+          {{cita.Activa ? 'Eliminar' : 'Activar'}}
+        </button>
+      </li>
+    </ul>
+    <h6 class="text-muted" style="margin: 35px 0;">Fecha de {{cita.Actualizacion ? 'actualizacion' : 'creacion'}}: {{ (cita.Actualizacion ? cita.Actualizacion : cita.Creacion) | date:'medium' }} </h6>
+    <h6 class="text-muted" style="margin: 35px 0;">Duracion: {{cita.Duracion}} Minuto(s) </h6>
+    <h6 class="text-muted" style="margin: 35px 0;">Estado: <span [ngClass]="{'text-danger': !cita.Activa, 'text-success': cita.Activa}">{{cita.Activa ? 'Activa' : 'Inactiva'}}</span> </h6>
+    <p class="text-justify my-3">{{cita.Descripcion}}</p>
+  </div>
+</div>

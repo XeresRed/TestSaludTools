@@ -1,0 +1,42 @@
+<div class="row mb-5">
+  <div class="col-12">
+    <h1>Crear nueva cita</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-8 col-md-12 mx-auto">
+    <form [formGroup]="citaGroup" (ngSubmit)="submit()" class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" placeholder="Nombre de la cita" name="name" formControlName="Nombre">
+        <small class="text-danger" *ngIf="Nombre.invalid">
+          El nombre es requerido
+        </small>
+      </div>
+      <div class="mb-3">
+        <label for="Duracion" class="form-label">Duracion en minutos</label>
+        <input type="text" class="form-control" id="Duracion" placeholder="duracion de la cita" name="Duracion" formControlName="Duracion">
+        <small class="text-danger" *ngIf="Duracion.invalid">
+          La duracion es requerida
+        </small>
+      </div>
+      <div class="mb-3">
+        <label for="Descripcion" class="form-label">Descripcion</label>
+        <textarea class="form-control" name="Descripcion" id="Descripcion" rows="3" formControlName="Descripcion"></textarea>
+        <small class="text-danger" *ngIf="Descripcion.invalid">
+          La descripcion es requerida
+        </small>
+      </div>
+      <div class="mb-3">
+        <label for="color" class="form-label">Prioridad</label>
+        <input type="color" class="form-control form-control-color" id="color" value="#563d7c" title="Seleccione un color" formControlName="Color">
+        <small class="text-danger" *ngIf="Color.invalid">
+          La prioridad es requerida
+        </small>
+      </div>
+      <div class="mb-4 d-grid gap-2">
+        <button class="btn btn-success" [ngClass]="{'btn-success': !update, 'btn-primary': update}" type="submit">{{update ? 'Actualizar' : 'Guardar'}}</button>
+      </div>
+    </form>
+  </div>
+</div>

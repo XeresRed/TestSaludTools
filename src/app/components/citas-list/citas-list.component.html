@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-12 mx-auto">
+    <div class="list-group">
+      <a [routerLink]="['/citas', 'detalle', cita.id]" class="list-group-item list-group-item-action m-2 list-change" *ngFor="let cita of citas">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1 d-flex">
+            <div class="importance" [style.backgroundColor]="cita.Color"></div>
+            {{cita.Nombre}}
+          </h5>
+          <small style="font-weight: bold;">{{cita.Creacion | date:'medium'}}</small>
+        </div>
+        <span class="badge bg-danger" *ngIf="!cita.Activa">Eliminada</span>
+        <p class="mb-1">{{cita.Descripcion.slice(0, 119)}}...</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end">
+    <li class="page-item" [ngClass]="{'disabled': page === 1}">
+      <a class="page-link" (click)="changePage(-1)" tabindex="-1">Anterior</a>
+    </li>
+    <li class="page-item" *ngFor="let pageSelector of pagesArray"><a class="page-link" (click)="goToPage(pageSelector)" >{{pageSelector}}</a></li>
+    <li class="page-item" [ngClass]="{'disabled': page === pages}">
+      <a class="page-link" (click)="changePage(1)">Siguiente</a>
+    </li>
+  </ul>
+</nav>

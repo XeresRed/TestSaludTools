@@ -1,0 +1,104 @@
+{
+  "citas": [
+    {
+      "id": 1,
+      "Nombre": "Cita de ejemplo 1",
+      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ante, sodales at efficitur vel, pulvinar non velit. Phasellus eleifend, orci ac sollicitudin luctus, est massa vulputate lectus, id laoreet dui mauris in magna.",
+      "Color": "#2f89fc",
+      "Duracion": "35",
+      "Activa": true,
+      "Creacion": "2021-06-12 14:00:00",
+      "Actualizacion": null
+    },
+    {
+      "id": 2,
+      "Nombre": "Cita de ejemplo 2",
+      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ante, sodales at efficitur vel, pulvinar non velit. Phasellus eleifend, orci ac sollicitudin luctus, est massa vulputate lectus, id laoreet dui mauris in magna.",
+      "Color": "#30e3ca",
+      "Duracion": "40",
+      "Activa": false,
+      "Creacion": "2021-06-09 14:00:00",
+      "Actualizacion": "2021-06-10 10:00:00"
+    },
+    {
+      "id": 3,
+      "Nombre": "Cita de ejemplo 3",
+      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ante, sodales at efficitur vel, pulvinar non velit. Phasellus eleifend, orci ac sollicitudin luctus, est massa vulputate lectus, id laoreet dui mauris in magna.",
+      "Color": "#f54748",
+      "Duracion": "20",
+      "Activa": false,
+      "Creacion": "2021-06-05 11:23:00",
+      "Actualizacion": null
+    },
+    {
+      "id": 4,
+      "Nombre": "Cita de ejemplo 4",
+      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ante, sodales at efficitur vel, pulvinar non velit. Phasellus eleifend, orci ac sollicitudin luctus, est massa vulputate lectus, id laoreet dui mauris in magna.",
+      "Color": "#7952b3",
+      "Duracion": "15",
+      "Activa": true,
+      "Creacion": "2021-06-01 14:00:00",
+      "Actualizacion": "2021-06-05 18:30:00"
+    },
+    {
+      "id": 5,
+      "Nombre": "Cita de ejemplo 5",
+      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ante, sodales at efficitur vel, pulvinar non velit. Phasellus eleifend, orci ac sollicitudin luctus, est massa vulputate lectus, id laoreet dui mauris in magna.",
+      "Color": "#ffc947",
+      "Duracion": "25",
+      "Activa": false,
+      "Creacion": "2021-06-12 09:25:00",
+      "Actualizacion": null
+    },
+    {
+      "id": 6,
+      "Nombre": "Cita de ejemplo 6",
+      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ante, sodales at efficitur vel, pulvinar non velit. Phasellus eleifend, orci ac sollicitudin luctus, est massa vulputate lectus, id laoreet dui mauris in magna.",
+      "Color": "#867ae9",
+      "Duracion": "20",
+      "Activa": false,
+      "Creacion": "2021-06-10 11:00:00",
+      "Actualizacion": null
+    },
+    {
+      "id": 7,
+      "Nombre": "Cita de ejemplo 7",
+      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ante, sodales at efficitur vel, pulvinar non velit. Phasellus eleifend, orci ac sollicitudin luctus, est massa vulputate lectus, id laoreet dui mauris in magna.",
+      "Color": "#511281",
+      "Duracion": "50",
+      "Activa": true,
+      "Creacion": "2021-06-12 10:00:00",
+      "Actualizacion": null
+    },
+    {
+      "Nombre": "Test Juan Camilo",
+      "Descripcion": "aaaa",
+      "Duracion": "225",
+      "Color": "#ff0f0f",
+      "Activa": true,
+      "Creacion": "Mon, 14 Jun 2021 19:03:44 GMT",
+      "Actualizacion": null,
+      "id": 8
+    },
+    {
+      "Nombre": "Nueva cita",
+      "Descripcion": "texto de descripcion",
+      "Duracion": "55",
+      "Color": "#1db7dd",
+      "Activa": true,
+      "Creacion": "Mon, 14 Jun 2021 19:09:00 GMT",
+      "Actualizacion": null,
+      "id": 9
+    },
+    {
+      "Nombre": "Nueva cita Luara Forero",
+      "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam, sapien eu facilisis finibus, sem odio vestibulum felis, a sodales felis elit at tortor. Aliquam ante ex, efficitur sit amet tempor sed, aliquam dignissim tortor. Suspendisse finibus mi sit amet augue viverra, ut iaculis justo consequat. Praesent pretium dolor eget velit venenatis laoreet. Mauris at quam vulputate, ornare odio venenatis, imperdiet augue. Aenean scelerisque lacinia tortor sit amet blandit. Pellentesque venenatis ex eu nunc fermentum mattis. Duis malesuada ex felis, vitae gravida tellus ornare at. In congue enim a augue luctus, ut tincidunt orci elementum. Fusce scelerisque dui magna, maximus faucibus ligula efficitur vitae. Etiam quam purus, lacinia eu tellus non, tincidunt tempor dui. Morbi pharetra ex a accumsan tempus. Fusce nec sapien nunc.",
+      "Duracion": "14",
+      "Color": "#230be0",
+      "Activa": true,
+      "Creacion": "Mon, 14 Jun 2021 19:09:53 GMT",
+      "Actualizacion": "Mon, 14 Jun 2021 19:31:59 GMT",
+      "id": 10
+    }
+  ]
+}

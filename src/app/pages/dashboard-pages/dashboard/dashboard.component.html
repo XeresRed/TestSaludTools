@@ -1,0 +1,2 @@
+<h2>Listado de citas ({{(citas$ | async).total}})</h2>
+<app-citas-list [citas]="(citas$ | async).citas" [pages]="(citas$ | async).pages"></app-citas-list>
