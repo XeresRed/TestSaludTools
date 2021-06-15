@@ -16,13 +16,25 @@ export class DashboardComponent implements OnInit {
   lastCitas$: Observable<Cita[]> = of([])
   citas$: Observable<{citas: Cita[], pages: number, total: number}> = of({citas: [], pages: 1, total: 0})
   page: number = 1
+  textSearch = false
+
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.store.dispatch(actions.LoadingLastCitas({size: 5}));
     this.store.dispatch(actions.LoadingAllCitas({page: this.page}));
     this.citas$ = this.store.select(selectors.GetAllCitas)
 
+  }
+
+  search(value: any) {
+    const textSearch = value.value
+    if (textSearch && textSearch !== undefined && textSearch !== '') {
+      this.textSearch = true;
+      this.store.dispatch(actions.LoadingSearchCitas({value: value.value}));
+    } else {
+      this.textSearch = false;
+      this.store.dispatch(actions.LoadingAllCitas({page: this.page}));
+    }
   }
 
 }

@@ -52,7 +52,6 @@ export class CreateCitaComponent implements OnInit {
 
       this.citaUpdate = {...this.citaUpdate, ...this.citaGroup.value}
       this.citaUpdate.Actualizacion = new Date().toUTCString();
-      console.log(this.citaUpdate)
       this.store.dispatch(actions.LoadingUpdateCita({cita: this.citaUpdate}))
     } else {
       const cita: Cita = this.citaGroup.value;

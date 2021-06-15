@@ -13,7 +13,7 @@ export class CitasListComponent implements OnInit {
 
   @Input() citas: Cita[] | null = []
   @Input() pages =  1;
-
+  @Input() textSearch = false
   @Output() pageEmit: EventEmitter<number> = new EventEmitter();
 
   page = 1

@@ -14,8 +14,8 @@ export class CitasService {
 
   constructor(private http: HttpClient) { }
 
-  getLastCitas(size: number): Observable<Cita[]> {
-    return this.http.get<Cita[]>(`${this.baseUrl}/citas?_sort=Creacion&_order=desc&_limit=${size}`)
+  searchCitas(value: string): Observable<Cita[]> {
+    return this.http.get<Cita[]>(`${this.baseUrl}/citas?Nombre_like=${value}&_sort=Creacion&_order=desc`)
   }
 
   getCitaDetail(id: number): Observable<Cita> {
@@ -36,6 +36,7 @@ export class CitasService {
   }
 
   updateCita(id: number, cita: Cita): Observable<Cita> {
+
     return this.http.put<Cita>(`${this.baseUrl}/citas/${id}`, {...cita})
   }
 

@@ -14,12 +14,12 @@ export class CitaEffects {
     constructor(private actions: Actions, private citasService: CitasService) {}
 
     loadingLastCitas$ = createEffect(() => this.actions.pipe(
-        ofType(fromactions.LoadingLastCitas),
-        mergeMap( (action) => this.citasService.getLastCitas(action.size).pipe(
-            mergeMap( (response) => {
-              return [fromactions.LastCitas({citas: response })]
+        ofType(fromactions.LoadingSearchCitas),
+        switchMap( (action) => this.citasService.searchCitas(action.value).pipe(
+          switchMap( (response) => {
+              return [fromactions.SearchCitas({citas: response })]
             }),
-            catchError( (error: HttpErrorResponse | any) => {
+            catchError( (error: HttpErrorResponse) => {
                 if (error?.status != null) {
                     const handler = new HttpHandler(error);
                     return of(
@@ -35,7 +35,6 @@ export class CitaEffects {
         ofType(fromactions.LoadingCitaDetail),
         switchMap( (action) => this.citasService.getCitaDetail(action.id).pipe(
             switchMap( (response) => {
-              console.log(response)
                 if (response) {
                   return [fromactions.CitaDetail({cita: response})]
                 } else {
@@ -75,7 +74,6 @@ export class CitaEffects {
         switchMap( (action) => this.citasService.createCita(action.cita).pipe(
             switchMap( (response) => {
                 if (response) {
-                  console.log(response)
                   return [
                       fromactions.toastMessageAction({message: `Se creo existosamente la cita ${response.Nombre}`, typeNotification: TYPE_SUCCESS}),
                       fromactions.CreateCitaAction({cita: response })

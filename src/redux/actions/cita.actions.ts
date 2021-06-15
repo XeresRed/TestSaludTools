@@ -11,12 +11,12 @@ export const AllCitas = createAction(
     props<{ citas: Cita[], pages: number, total: number}>()
 );
 
-export const LoadingLastCitas = createAction(
+export const LoadingSearchCitas = createAction(
     '[CITA] Loading last citas',
-    props<{ size: number}>()
+    props<{ value: string}>()
 );
 
-export const LastCitas = createAction(
+export const SearchCitas = createAction(
     '[CITA] Last citas',
     props<{ citas: Cita[]}>()
 );

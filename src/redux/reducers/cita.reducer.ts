@@ -27,13 +27,13 @@ const initState: CitaState = {
 const Reducer = createReducer(
     initState,
     on(
-        actions.LoadingLastCitas,
+        actions.LoadingSearchCitas,
         actions.LoadingCitaDetail,
         actions.LoadingAllCitas,
         actions.LoadingCreateCita,
         actions.LoadingUpdateCita,
         (state) => ({ ...state, loading: true })),
-    on(actions.LastCitas, (state, {citas}) => ({ ...state, loading: false, lastCitas: [...citas] })),
+    on(actions.SearchCitas, (state, {citas}) => ({ ...state, loading: false, citas: [...citas] })),
     on(actions.CitaDetail, (state, {cita}) => ({ ...state, loading: false, citaDetail: {...cita} })),
     on(actions.AllCitas, (state, {citas, pages, total}) => ({ ...state, loading: false, citas: [...citas], pages, total })),
     on(actions.CreateCitaAction, (state, {cita}) => ({...state, loading: false, citas: [...state.citas, cita]})),

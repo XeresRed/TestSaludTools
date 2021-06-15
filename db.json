@@ -26,7 +26,7 @@
       "Descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla ante, sodales at efficitur vel, pulvinar non velit. Phasellus eleifend, orci ac sollicitudin luctus, est massa vulputate lectus, id laoreet dui mauris in magna.",
       "Color": "#f54748",
       "Duracion": "20",
-      "Activa": false,
+      "Activa": true,
       "Creacion": "2021-06-05 11:23:00",
       "Actualizacion": null
     },
